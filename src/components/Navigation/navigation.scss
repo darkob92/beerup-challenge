@@ -1,0 +1,43 @@
+.navigation {
+  margin: 0 auto;
+  width: 75%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__logo-box {
+    display: flex;
+    width: 20%;
+    align-items: center;
+    
+    .logo:first-child {
+      margin-right: 1rem;
+      height: 3.3rem;
+    }
+
+    .logo:nth-child(2) {
+      height: 2.2rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__item:nth-child(3) {
+    border: 5px solid #FFC80A;
+    padding: 1.5rem 4.5rem;
+    border-radius: 3rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+}

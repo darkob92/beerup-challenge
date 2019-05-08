@@ -3,6 +3,8 @@
   margin: 5rem auto;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  height: 80vh;
 
   &__title-box {
     width: 45%;
@@ -29,12 +31,12 @@
   }
 
   &__img {
-    margin-top: 3.5rem;
+    margin-top: 6.5rem;
     position: relative;
 
     img:nth-child(2) {
       position: absolute;
-      bottom: 9%;
+      bottom: -2%;
       right: 5rem;
       z-index: 999;
     }

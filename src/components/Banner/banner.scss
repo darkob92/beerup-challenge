@@ -34,8 +34,9 @@
 
     img:nth-child(2) {
       position: absolute;
-      bottom: 10%;
+      bottom: 9%;
       right: 5rem;
+      z-index: 999;
     }
   }
 }

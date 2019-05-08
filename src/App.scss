@@ -8,3 +8,9 @@ body {
   background: #000;
   font-family: 'Montserrat', sans-serif;
 }
+
+.App {
+  height: 100vh;
+  background-image: url(./assets/pattern.svg);
+  background-size: contain;
+}

@@ -1,0 +1,41 @@
+.banner {
+  width: 75%;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: space-between;
+
+  &__title-box {
+    width: 45%;
+    color: #fff;
+    text-transform: uppercase;
+
+    h5 {
+      font-size: 1.6rem;
+    }
+
+    h1 {
+      font-size: 8rem;
+    }
+
+    .button {
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      background: #FFC80A;
+      color: #000;
+      padding: 1.5rem 3rem;
+      border-radius: 2.5rem;
+    }
+  }
+
+  &__img {
+    margin-top: 3.5rem;
+    position: relative;
+
+    img:nth-child(2) {
+      position: absolute;
+      bottom: 10%;
+      right: 5rem;
+    }
+  }
+}

@@ -8,8 +8,8 @@ const Footer = () => {
     <footer className="footer-section">
       <div className="footer">
         <div className="footer__logo-box">
-          <img src={Symbol} />
-          <img src={Logo} />
+          <img alt="symbol" src={Symbol} />
+          <img alt="logo" src={Logo} />
         </div>
 
         <div>
@@ -21,10 +21,10 @@ const Footer = () => {
         </div>
 
         <div className="footer__socials">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i className="fab fa-facebook-f"></i></a>
+          <a href="#"><i className="fab fa-twitter"></i></a>
+          <a href="#"><i className="fab fa-linkedin-in"></i></a>
+          <a href="#"><i className="fab fa-pinterest"></i></a>
         </div>
       </div>
     </footer>

@@ -1,0 +1,50 @@
+.product {
+  height: 20%;
+  width: 20%;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  background: #fff;
+  box-shadow: .2rem .2rem 3rem #ccc;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  border-radius: 0.5rem;
+
+  &__fav {
+    height: 1.2rem;
+  }
+
+  &__beer {
+    height: 10rem;
+    margin: 2rem 1rem;
+    width: 20%;
+  }
+
+  &__description {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+
+    h4 {
+      font-size: 1.4rem;
+      width: 35%;
+      text-transform: uppercase;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    p {
+      display: flex;
+      font-size: 1.4rem;
+    }
+
+    span {
+      display: block;
+    }
+
+    span:first-child {
+      color: #B0B3B6;
+      margin-right: 1.5rem;
+    }
+  }
+}

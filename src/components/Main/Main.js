@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './main.scss';
-import Heart from '../../assets/heart-solid.svg';
-import Beer from '../../assets/beer-behind.svg';
+import Product from '../Product/Product';
 import Crate from '../../assets/crate.svg';
 
 class Main extends Component {
@@ -14,21 +13,7 @@ class Main extends Component {
 
             <div className="main-container__products">
               {/**** product start ****/}
-              <div className="product">
-                <img className="product__fav" src={Heart} />
-                <img className="product__beer" src={Beer} />
-                <div className="product__description">
-                  <h4>Beer Name</h4>
-                  <p>
-                    <span>IBU</span>
-                    <span>35</span>
-                  </p>
-                  <p>
-                    <span>ABV</span>
-                    <span>5,6%</span>
-                  </p>
-                </div>
-              </div>
+                <Product />
               {/**** product end ****/}
             </div>
           </div>
@@ -42,7 +27,7 @@ class Main extends Component {
               <li className="favorites-list__item">Three</li>
             </ul>
 
-            <img src={Crate} />
+            <img alt="crate" src={Crate} />
             <p>Add a beer to have it appear in the crate.</p>
           </div>
         </div>

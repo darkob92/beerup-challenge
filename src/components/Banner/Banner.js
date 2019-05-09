@@ -12,8 +12,8 @@ const Banner = () => {
         <a className="button" href="#">Join beerup</a>
       </div>
       <div className="banner__img">
-        <img src={Beers} />
-        <img src={Cap} />
+        <img alt="beers" src={Beers} />
+        <img alt="cap" src={Cap} />
       </div>
     </section>
   );

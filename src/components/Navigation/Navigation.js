@@ -7,8 +7,8 @@ const Navigation = () => {
   return(
     <nav className="navigation">
       <div className="navigation__logo-box">
-        <img className="logo" src={Symbol} />
-        <img className="logo" src={Logo} />
+        <img alt="symbol" className="logo" src={Symbol} />
+        <img alt="logo" className="logo" src={Logo} />
       </div>
 
       <ul className="navigation__list">

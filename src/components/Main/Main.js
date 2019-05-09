@@ -19,8 +19,6 @@ class Main extends Component {
     console.log(this.state.beers);
   }
 
-
-
   render() {
     return(
       <section className="main-section">
@@ -38,6 +36,7 @@ class Main extends Component {
                       imgUrl={beer.image_url}
                       ibu={beer.ibu}
                       abv={beer.abv}
+                      description={beer.description}
                     />
                   );
                 })}
@@ -47,7 +46,7 @@ class Main extends Component {
 
           <div className="main-container__favorites">
             <h3>Crate</h3>
-
+      
             <ul className="favorites-list">
               <li className="favorites-list__item">One</li>
               <li className="favorites-list__item">Two</li>

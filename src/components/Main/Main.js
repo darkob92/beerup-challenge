@@ -8,12 +8,13 @@ class Main extends Component {
     beers: []
   }
 
+  /* fetching beers from punkapi and adding to state */
   async componentDidMount() {
     const data = await fetch('https://api.punkapi.com/v2/beers');
     const beers = await data.json();
 
     this.setState({
-      beers: beers
+      beers
     });
 
     console.log(this.state.beers);
@@ -25,9 +26,8 @@ class Main extends Component {
         <div className="main-container">
           <div className="main-container__products-box">
             <h3>Beer</h3>
-
+            {/* mapping through beers array */}
             <div className="main-container__products">
-              {/**** product start ****/}
                 {this.state.beers.map((beer, i) => {
                   return(
                     <Product 
@@ -40,7 +40,6 @@ class Main extends Component {
                     />
                   );
                 })}
-              {/**** product end ****/}
             </div>
           </div>
 

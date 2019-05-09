@@ -11,11 +11,19 @@
   border-radius: 5px;
   z-index: 999;
 
-  img:first-child {
+  .icons {
     height: 5%;
     position: absolute;
     top: 8%;
+    cursor: pointer;
+  }
+
+  img:first-child {
     left: 5%;
+  }
+
+  img:nth-child(2) {
+    right: 5%;
   }
 
   img {

@@ -4,6 +4,23 @@ import Product from '../Product/Product';
 import Crate from '../../assets/crate.svg';
 
 class Main extends Component {
+  state = {
+    beers: []
+  }
+
+  async componentDidMount() {
+    const data = await fetch('https://api.punkapi.com/v2/beers');
+    const beers = await data.json();
+
+    this.setState({
+      beers: beers
+    });
+
+    console.log(this.state.beers);
+  }
+
+
+
   render() {
     return(
       <section className="main-section">
@@ -13,7 +30,17 @@ class Main extends Component {
 
             <div className="main-container__products">
               {/**** product start ****/}
-                <Product />
+                {this.state.beers.map((beer, i) => {
+                  return(
+                    <Product 
+                      key={beer.id}
+                      name={beer.name}
+                      imgUrl={beer.image_url}
+                      ibu={beer.ibu}
+                      abv={beer.abv}
+                    />
+                  );
+                })}
               {/**** product end ****/}
             </div>
           </div>

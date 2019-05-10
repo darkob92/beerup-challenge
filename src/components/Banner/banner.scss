@@ -1,10 +1,9 @@
 .banner {
   width: 75%;
-  margin: 5rem auto;
+  margin: 3rem auto;
   display: flex;
   justify-content: space-between;
   position: relative;
-  height: 80vh;
 
   &__title-box {
     width: 45%;
@@ -23,13 +22,13 @@
   &__img {
     margin-top: 6.5rem;
     position: relative;
-    top: 0;
-    right: -5%;
+    /* top: 0;
+    right: -5%; */
     z-index: -1;
 
     img:nth-child(2) {
       position: absolute;
-      bottom: -1%;
+      bottom: 12%;
       right: 5rem;
       z-index: 999;
     }

@@ -1,6 +1,6 @@
 .sign-up-section {
   width: 100%;
-  height: 125vh;
+  height: 170vh;
   background: #f7f7f7;
   margin-top: -10rem;
   position: relative;
@@ -15,9 +15,11 @@
 
   .form-container {
     width: 40%;
+    height: 80%;
     margin: 2rem auto;
     background: #fff;
     border-radius: 5px;
+    box-shadow: .2rem .2rem 3rem #ccc;
   }
 
   .input-container {
@@ -48,5 +50,55 @@
       padding: 2rem;
       border: 1px solid #ccc;
     }
+
+    &__radio {
+      width: 70%;
+      display: flex;
+      align-content: space-between;
+      margin-bottom: 2rem;
+      
+      input {
+       width: 10%;
+       padding: 0;
+       height: 2rem;
+       margin-bottom: 0;
+       display: inline-block;
+      }
+
+      span {
+        margin-left: 0;
+        align-self: center;
+        font-size: 1.4rem;
+        font-weight: 600;
+      }
+    }
+
+    textarea {
+      font-family: 'Montserrat', sans-serif;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .input-container:last-child {
+    border-bottom: none;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .submit {
+    display: block;
+    text-transform: uppercase;
+    padding: 2rem 10rem;
+    border: 0;
+    border-radius: 2.5rem;
+    font-weight: 700;
+    background: #FFC80A;
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

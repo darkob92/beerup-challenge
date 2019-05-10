@@ -29,18 +29,18 @@ class Modal extends Component {
         {
           this.state.close === true ? 
           null :
-          <EscapeOutside onEscapeOutside={this.handleEscapeOutside}>
-            <div className="modal" onKeyUp={this.handleEscapeModal}>
-              <img className="icons" src={HeartOutline} />
-              <img className="icons" src={Close} onClick={this.handleCloseModal} />
-              <img src={this.props.imgUrl} />
-              <div className="modal__about">
-                <h3>{this.props.name}</h3>
-                <p>{this.props.description}</p>
-                <a className="button" href="#">Add To Crate</a>
+            <EscapeOutside onEscapeOutside={this.handleEscapeOutside}>
+              <div className="modal" onKeyUp={this.handleEscapeModal}>
+                <img className="icons" src={HeartOutline} />
+                <img className="icons" src={Close} onClick={this.handleCloseModal} />
+                <img src={this.props.imgUrl} />
+                <div className="modal__about">
+                  <h3>{this.props.name}</h3>
+                  <p>{this.props.description}</p>
+                  <a className="button" href="#">Add To Crate</a>
+                </div>
               </div>
-            </div>
-          </EscapeOutside>
+            </EscapeOutside>
         }
       </React.Fragment>
     );

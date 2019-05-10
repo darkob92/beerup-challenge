@@ -5,8 +5,12 @@
   "dependencies": {
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
+    "react-close-on-escape": "^3.0.0",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0"
+    "react-escape-outside": "^0.1.1",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.0.0",
+    "sass-resources-loader": "^2.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

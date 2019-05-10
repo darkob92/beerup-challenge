@@ -15,7 +15,6 @@ class Product extends Component {
   };
   
 
-
   render() {
     return (
       <React.Fragment>
@@ -39,6 +38,7 @@ class Product extends Component {
             <Modal 
             name={this.props.name} 
             description={this.props.description}
+            imgUrl={this.props.imgUrl}
             />
           )
         }

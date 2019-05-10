@@ -3,12 +3,11 @@
   height: 125vh;
   background: #f7f7f7;
   margin-top: -5rem;
-  position: absolute;
-  z-index: 998;
+  position: relative;
   overflow: hidden;
 
   h3 {
-      font-size: 3.5rem;
+    font-size: 3.5rem;
   }
 }
 

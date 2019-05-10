@@ -23,10 +23,13 @@
   &__img {
     margin-top: 6.5rem;
     position: relative;
+    top: 0;
+    right: -5%;
+    z-index: -1;
 
     img:nth-child(2) {
       position: absolute;
-      bottom: -2%;
+      bottom: -1%;
       right: 5rem;
       z-index: 999;
     }

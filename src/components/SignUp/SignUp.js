@@ -37,7 +37,7 @@ class SignUp extends Component {
           this.props.history.push('/')
         }, 2000)
       })
-      .catch(error => console.error('Error:', error));
+      .catch(error => alert('Error:', error));
   }
 
 

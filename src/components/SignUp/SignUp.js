@@ -2,21 +2,41 @@ import React, { Component } from 'react';
 import './signup.scss';
 
 class SignUp extends Component {
+  state = {
+    name: '',
+    email: '',
+    phone: ''
+  }
+
+
+  handleChange = (e) => {
+    let target = e.target;
+    let value = target.type === 'checkbox' ? target.checked : target.value;
+    let name = target.name;
+
+    this.setState({
+      [name]: value
+    })
+  }
+
+
+
   render() {
     return(
       <section className="sign-up-section">
         <h3>Quick, join up before we drink all the beer!</h3>
 
         <div className="form-container">
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <div className="input-container">
-              <label>Personal Information</label>
-              <input type="text" placeholder="Full name" />
+              <label htmlFor="name">Personal Information</label>
+              <input name="name" id="name" type="text" placeholder="Full name" value={this.state.name} onChange={this.handleChange} />
             </div>
             <div className="input-container">
-              <label>Contact Information</label>
-              <input type="email" placeholder="Email" />
-              <input type="number" placeholder="Phone number" />
+              <label htmlFor="email">Contact Information</label>
+              <input name="email" id="email" type="email" placeholder="Email" value={this.state.email} onChange={this.handleChange} />
+              <label htmlFor="phone"></label>
+              <input name="phone" id="phone" type="number" placeholder="Phone number" value={this.state.phone} onChange={this.handleChange} />
             </div>
             <div className="input-container">
               <label>RSVP</label>
@@ -33,10 +53,10 @@ class SignUp extends Component {
             </div>
             <div className="input-container">
               <div className="input-container__radio">
-                <input type="checkbox" name="answer" value="maybe" /><span>Let me know about future beerups!</span>
+                <input type="checkbox" name="know" value="know" /><span>Let me know about future beerups!</span>
               </div>
               <div className="input-container__radio">
-                <input type="checkbox" name="answer" value="maybe" /><span>Remind me one day before this beerup!S</span>
+                <input type="checkbox" name="remind" value="remind" /><span>Remind me one day before this beerup!S</span>
               </div>
             </div>
             <button className="submit" type="submit">Join up</button>

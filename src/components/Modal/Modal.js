@@ -33,9 +33,9 @@ class Modal extends Component {
           null :
             <EscapeOutside onEscapeOutside={this.handleEscapeOutside}>
               <div className="modal" onKeyUp={this.handleEscapeModal}>
-                <img className="icons" src={HeartOutline} />
-                <img className="icons" src={Close} onClick={this.handleCloseModal} />
-                <img src={imgUrl} />
+                <img alt="heart-outline" className="icons" src={HeartOutline} />
+                <img alt="close-button" className="icons" src={Close} onClick={this.handleCloseModal} />
+                <img alt={name} src={imgUrl} />
                 <div className="modal__about">
                   <h3>{name}</h3>
                   <p>{description}</p>

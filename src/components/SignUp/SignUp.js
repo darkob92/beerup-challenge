@@ -20,6 +20,27 @@ class SignUp extends Component {
   }
 
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    let data = this.state;
+
+    fetch('https://my-json-server.typicode.com/typicode/demo/profile', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(res => res.json())
+      .then(response => alert(`Success! Welcome ${response.name}`))
+      .then(response => {
+        setTimeout(() => {
+          this.props.history.push('/')
+        }, 2000)
+      })
+      .catch(error => console.error('Error:', error));
+  }
+
+
 
   render() {
     return(
@@ -27,7 +48,7 @@ class SignUp extends Component {
         <h3>Quick, join up before we drink all the beer!</h3>
 
         <div className="form-container">
-          <form onSubmit={this.handleSubmit}>
+          <form method="post" onSubmit={this.handleSubmit}>
             <div className="input-container">
               <label htmlFor="name">Personal Information</label>
               <input name="name" id="name" type="text" placeholder="Full name" value={this.state.name} onChange={this.handleChange} />

@@ -2,6 +2,7 @@ import React from 'react';
 import './footer.scss';
 import Logo from '../../assets/logo.svg';
 import Symbol from '../../assets/symbol.svg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return(
@@ -14,9 +15,9 @@ const Footer = () => {
 
         <div>
           <ul className="footer__list">
-            <li className="footer__item"><a className="footer__link" href="#">Home</a></li>
-            <li className="footer__item"><a className="footer__link" href="#">Favorites</a></li>
-            <li className="footer__item"><a className="footer__link" href="#">Join</a></li>
+            <li className="footer__item"><Link className="footer__link" to="/">Home</Link></li>
+            <li className="footer__item"><Link className="footer__link" to="/favorites">Favorites</Link></li>
+            <li className="footer__item"><Link className="footer__link" to="/signup">Join</Link></li>
           </ul>
         </div>
 

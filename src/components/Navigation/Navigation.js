@@ -2,6 +2,7 @@ import React from 'react';
 import './navigation.scss';
 import Logo from '../../assets/logo.svg';
 import Symbol from '../../assets/symbol.svg';
+import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
   return(
@@ -12,9 +13,9 @@ const Navigation = () => {
       </div>
 
       <ul className="navigation__list">
-        <li className="navigation__item"><a className="navigation__link" href="#">Home</a></li>
-        <li className="navigation__item"><a className="navigation__link" href="#">Favorites</a></li>
-        <li className="navigation__item"><a className="navigation__link">Join</a></li>
+        <li className="navigation__item"><NavLink className="navigation__link" to="/">Home</NavLink></li>
+        <li className="navigation__item"><NavLink className="navigation__link" to="/favorites">Favorites</NavLink></li>
+        <li className="navigation__item"><NavLink className="navigation__link" to="/signup">Join</NavLink></li>
       </ul>
     </nav>
   );

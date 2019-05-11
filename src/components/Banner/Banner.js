@@ -3,6 +3,7 @@ import '../../Sass/components.scss';
 import './banner.scss';
 import Beers from '../../assets/illustration.svg';
 import Cap from '../../assets/cap.svg';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
   return(
@@ -11,7 +12,7 @@ const Banner = () => {
         <div className="banner__title-box">
           <h5>The Beersteer pro 2.0</h5>
           <h1 className="title title--primary">Join our famous beerup!</h1>
-          <a className="btn btn--small" href="#">Join beerup</a>
+          <Link className="btn btn--small" to="/signup">Join beerup</Link>
         </div>
         <div className="banner__img">
           <img alt="beers" src={Beers} />

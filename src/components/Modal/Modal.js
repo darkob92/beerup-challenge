@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../../Sass/components.scss';
 import './modal.scss';
 import HeartOutline from '../../assets/heart-outline.svg';
 import Close from '../../assets/Close-icon.svg';
@@ -24,6 +25,7 @@ class Modal extends Component {
   }
 
   render() {
+    const { imgUrl, name, description } = this.props;
     return (
       <React.Fragment>
         {
@@ -33,11 +35,11 @@ class Modal extends Component {
               <div className="modal" onKeyUp={this.handleEscapeModal}>
                 <img className="icons" src={HeartOutline} />
                 <img className="icons" src={Close} onClick={this.handleCloseModal} />
-                <img src={this.props.imgUrl} />
+                <img src={imgUrl} />
                 <div className="modal__about">
-                  <h3>{this.props.name}</h3>
-                  <p>{this.props.description}</p>
-                  <a className="button" href="#">Add To Crate</a>
+                  <h3>{name}</h3>
+                  <p>{description}</p>
+                  <a className="btn btn--medium" href="#">Add To Crate</a>
                 </div>
               </div>
             </EscapeOutside>

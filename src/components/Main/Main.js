@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../../Sass/components.scss';
 import './main.scss';
 import Product from '../Product/Product';
 import Crate from '../../assets/crate.svg';
@@ -25,7 +26,7 @@ class Main extends Component {
       <section className="main-section">
         <div className="main-container">
           <div className="main-container__products-box">
-            <h3>Beer</h3>
+            <h3 className="title title--secondary">Beer</h3>
             {/* mapping through beers array */}
             <div className="main-container__products">
                 {this.state.beers.map((beer, i) => {
@@ -44,7 +45,7 @@ class Main extends Component {
           </div>
 
           <div className="main-container__favorites">
-            <h3>Crate</h3>
+            <h3 className="title title--secondary">Crate</h3>
       
             <ul className="favorites-list">
               <li className="favorites-list__item">One</li>

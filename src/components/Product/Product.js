@@ -16,29 +16,30 @@ class Product extends Component {
   
 
   render() {
+    const { key, imgUrl, name, ibu, abv, description } = this.props;
     return (
       <React.Fragment>
-        <div className="product" key={this.props.key} onClick={this.handleShowModal}>
+        <div className="product" key={key} onClick={this.handleShowModal}>
           <img alt="favorite" className="product__fav" src={HeartOutline} />
-          <img alt="beer" className="product__beer" src={this.props.imgUrl} />
+          <img alt="beer" className="product__beer" src={imgUrl} />
           <div className="product__description">
-            <h4>{this.props.name}</h4>
+            <h4>{name}</h4>
             <p>
               <span>IBU</span>
-              <span>{this.props.ibu}</span>
+              <span>{ibu}</span>
             </p>
             <p>
               <span>ABV</span>
-              <span>{this.props.abv}</span>
+              <span>{abv}</span>
             </p>
           </div>
         </div>
         {
           this.state.isOpen && (
             <Modal 
-            name={this.props.name} 
-            description={this.props.description}
-            imgUrl={this.props.imgUrl}
+            name={name} 
+            description={description}
+            imgUrl={imgUrl}
             />
           )
         }

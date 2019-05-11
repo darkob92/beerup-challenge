@@ -1,0 +1,47 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: #FFC80A;
+    color: #000;
+    border-radius: 2.5rem;
+    display: block;
+    text-align: center;
+
+    // for button element
+    border: none;
+    cursor: pointer;
+  }
+
+  &--small {
+    padding: 1.7rem 2rem;
+    width: 25%;
+  }
+
+  &--medium {
+    width: 45%;
+    padding: 2rem 3rem;
+  }
+
+  &--large {
+    padding: 2rem 10rem;
+    border-radius: 2.5rem;
+    font-weight: 700;
+  }
+}
+
+.title {
+
+  &--primary {
+    font-size: 8rem;
+  }
+
+  &--secondary {
+    font-size: 3.5rem;
+  }
+}

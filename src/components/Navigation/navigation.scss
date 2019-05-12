@@ -4,6 +4,7 @@
   height: 10rem;
   display: flex;
   justify-content: space-between;
+  position: relative;
 
   &__logo-box {
     display: flex;
@@ -26,6 +27,14 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @media screen and (max-width: 950px) {
+      width: 55%;
+    }
+
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
   }
 
   &__item:nth-child(3) {
@@ -40,5 +49,58 @@
     color: #fff;
     font-size: 1.2rem;
     font-weight: 600;
+  }
+
+  &__menu {
+    display: none;
+    cursor: pointer;
+    align-self: center;
+
+    @media screen and (max-width: 600px) {
+      display: inline-block;
+    }
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #FFC80A;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  .menu-list {
+    list-style: none;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background: #000;
+    width: 90%;
+    height: 50rem;
+    z-index: 999;
+
+    li {
+      margin-bottom: 4rem;
+    }
   }
 }

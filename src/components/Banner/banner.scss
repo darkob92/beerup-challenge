@@ -8,10 +8,24 @@
   justify-content: space-between;
   position: relative;
 
+  @media screen and (max-width: 1126px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__title-box {
     width: 45%;
     color: #fff;
     text-transform: uppercase;
+
+    @media screen and (max-width: 1126px) {
+      text-align: center;
+      width: 50%;
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 70%;
+    }
 
     h5 {
       font-size: 1.6rem;
@@ -19,6 +33,31 @@
 
     h1 {
       font-size: 8rem;
+
+      @media screen and (max-width: 800px) {
+        font-size: 6rem;
+      }
+    }
+  }
+
+  .btn__banner {
+    @media screen and (max-width: 1126px) {
+      margin: 0 auto;
+      position: absolute;
+      width: 15%;
+      bottom: 7%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: 20%;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 50%;
+      height: 3%;
+      font-size: 2.4rem;
     }
   }
 
@@ -26,6 +65,12 @@
     margin-top: 6.5rem;
     position: relative;
     z-index: -1;
+
+    img:first-child {
+      @media screen and (max-width: 600px) {
+        height: 35rem;
+      }
+    }
 
     img:nth-child(2) {
       position: absolute;

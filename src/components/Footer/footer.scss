@@ -5,11 +5,25 @@
   background-size: cover;
   margin-top: -3rem;
 
+  @media screen and (max-width: 750px) {
+    height: 30vh;
+  }
+
   .footer {
     display: flex;
     justify-content: space-between;
     width: 80%;
     margin: 3rem auto;
+
+    @media screen and (max-width: 1024px) {
+      width: 90%;
+    }
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      height: 100%;
+      margin: 1rem auto;
+    }
 
     img {
       margin-right: 1rem;
@@ -21,12 +35,32 @@
       list-style: none;
       display: flex;
       justify-content: space-between;
+      
+      @media screen and (max-width: 1024px) {
+        width: 40%;
+      }
+
+      @media screen and (max-width: 900px) {
+        flex-direction: column;
+        margin-bottom: 2rem;
+        height: 100%;
+        padding: 0;
+      }
     }
 
     &__item {
       margin-right: 2.5rem;
       margin-left: 2.5rem;
       align-self: center;
+
+      @media screen and (max-width: 900px) {
+        margin-left: 0;
+        align-self: flex-start;
+      }
+
+      @media screen and (max-width: 600px) {
+        margin-bottom: 1rem;
+      }
     }
 
     &__link {
@@ -42,6 +76,11 @@
       justify-content: flex-end;
       width: 30%;
 
+      @media screen and (max-width: 900px) {
+        margin-top: 2rem;
+        justify-content: flex-start
+      }
+
       a {
         font-size: 1.6rem;
         margin-right: 3rem;
@@ -56,5 +95,10 @@
     margin-top: 5rem;
     margin-right: 1rem;
     display: flex;
+
+    @media screen and (max-width: 900px) {
+      margin-top: 2rem;
+      margin-left: 0;
+    }
   }
 }

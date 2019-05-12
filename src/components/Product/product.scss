@@ -1,6 +1,6 @@
 .product {
-  height: 20%;
-  width: 20%;
+  height: 28%;
+  width: 25%;
   padding: 1rem;
   position: relative;
   display: flex;
@@ -9,6 +9,28 @@
   margin-top: 2rem;
   margin-right: 2rem;
   border-radius: 0.5rem;
+
+   @media screen and (max-width: 1050px) {
+      width: 40%;
+      height: 15rem;
+  }
+  
+  @media screen and (max-width: 880px) {
+      width: 35%;
+      height: 15rem;
+  }
+
+  @media screen and (max-width: 750px) {
+      width: 55%;
+      height: 15rem;
+      margin: 2rem auto;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin-right: 4rem;
+    height: 56%;
+    width: 30%;
+  }
 
   &__fav {
     height: 1.2rem;
@@ -31,11 +53,23 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+
+      @media screen and (max-width: 750px) {
+        width: 50%;
+      }
+
+      @media screen and (max-width: 600px) {
+        width: 30%;
+      }
     }
 
     p {
       display: flex;
       font-size: 1.4rem;
+
+      @media screen and (max-width: 600px) {
+        font-size: 1.2rem;
+      }
     }
 
     span {
@@ -45,6 +79,10 @@
     span:first-child {
       color: #B0B3B6;
       margin-right: 1.5rem;
+
+      @media screen and (max-width: 600px) {
+        margin-right: 0.5rem;
+      }
     }
   }
 }

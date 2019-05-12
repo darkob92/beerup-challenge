@@ -9,6 +9,10 @@
     height: 30vh;
   }
 
+  @media screen and (max-width: 500px) {
+    height: 40vh;
+  }
+
   .footer {
     display: flex;
     justify-content: space-between;

@@ -39,7 +39,7 @@ class Modal extends Component {
                 <div className="modal__about">
                   <h3>{name}</h3>
                   <p>{description}</p>
-                  <a className="btn btn--medium" href="#">Add To Crate</a>
+                  <a className="btn btn--medium btn__modal" href="#">Add To Crate</a>
                 </div>
               </div>
             </EscapeOutside>

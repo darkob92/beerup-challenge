@@ -3,6 +3,7 @@ import './navigation.scss';
 import Logo from '../../assets/logo.svg';
 import Symbol from '../../assets/symbol.svg';
 import { NavLink } from 'react-router-dom';
+import { NavAnimation } from '../../animations/animations';
 
 class Navigation extends Component {
   state = {
@@ -20,16 +21,20 @@ class Navigation extends Component {
   render() {
     return (
       <nav className="navigation">
-        <div className="navigation__logo-box">
-          <img alt="symbol" className="logo" src={Symbol} />
-          <img alt="logo" className="logo" src={Logo} />
-        </div>
+        <NavAnimation>
+          <div className="navigation__logo-box">
+            <img alt="symbol" className="logo" src={Symbol} />
+            <img alt="logo" className="logo" src={Logo} />
+          </div>
+        </NavAnimation>
 
-        <ul className="navigation__list">
-          <li className="navigation__item"><NavLink className="navigation__link" to="/">Home</NavLink></li>
-          <li className="navigation__item"><NavLink className="navigation__link" to="/favorites">Favorites</NavLink></li>
-          <li className="navigation__item"><NavLink className="navigation__link" to="/signup">Join</NavLink></li>
-        </ul>
+        <NavAnimation>
+          <ul className="navigation__list">
+            <li className="navigation__item"><NavLink className="navigation__link" to="/">Home</NavLink></li>
+            <li className="navigation__item"><NavLink className="navigation__link" to="/favorites">Favorites</NavLink></li>
+            <li className="navigation__item"><NavLink className="navigation__link" to="/signup">Join</NavLink></li>
+          </ul>
+        </NavAnimation>
 
         {/* hamburger menu for mobile devices */}
 

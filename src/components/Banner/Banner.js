@@ -4,6 +4,7 @@ import './banner.scss';
 import Beers from '../../assets/illustration.svg';
 import Cap from '../../assets/cap.svg';
 import { Link } from 'react-router-dom';
+import { BeerAnimation } from '../../animations/animations';
 
 const Banner = () => {
   return(
@@ -15,7 +16,9 @@ const Banner = () => {
           <Link className="btn btn--small btn__banner" to="/signup">Join beerup</Link>
         </div>
         <div className="banner__img">
-          <img alt="beers" src={Beers} />
+          <BeerAnimation>
+            <img alt="beers" src={Beers} />
+          </BeerAnimation>
           <img alt="cap" src={Cap} />
         </div>
       </div>

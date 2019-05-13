@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './product.scss';
 import HeartOutline from '../../assets/heart-outline.svg';
 import Modal from '../Modal/Modal';
+import { ProductsAnimations } from '../../animations/animations';
 
 class Product extends Component {
   state = {
@@ -19,21 +20,23 @@ class Product extends Component {
     const { key, imgUrl, name, ibu, abv, description } = this.props;
     return (
       <React.Fragment>
-        <div className="product" key={key} onClick={this.handleShowModal}>
-          <img alt="favorite" className="product__fav" src={HeartOutline} />
-          <img alt="beer" className="product__beer" src={imgUrl} />
-          <div className="product__description">
-            <h4>{name}</h4>
-            <p>
-              <span>IBU</span>
-              <span>{ibu}</span>
-            </p>
-            <p>
-              <span>ABV</span>
-              <span>{abv}</span>
-            </p>
+        <ProductsAnimations>
+          <div className="product" key={key} onClick={this.handleShowModal}>
+            <img alt="favorite" className="product__fav" src={HeartOutline} />
+            <img alt="beer" className="product__beer" src={imgUrl} />
+            <div className="product__description">
+              <h4>{name}</h4>
+              <p>
+                <span>IBU</span>
+                <span>{ibu}</span>
+              </p>
+              <p>
+                <span>ABV</span>
+                <span>{abv}</span>
+              </p>
+            </div>
           </div>
-        </div>
+        </ProductsAnimations>
         {
           this.state.isOpen && (
             <Modal 

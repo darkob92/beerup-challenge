@@ -1,3 +1,8 @@
+/* Isti dizajn kao na predlošku sam mislio pogoditi tako što ću div s .App class postaviti u relative position i children elemente postaviti u absolute kako bih onda mogao "Cap" img s većim z-indexom postaviti na prijelaz iz bannera u main component. No kada god bih postavio ostale elemente u absolute position, no main component je preklopio footer component tako da sam onda morao footer pozicionirati svojstvima bottom i left. No i taj način se nije pokazao dobrim te nakon toga footer uopće nije reagirao na bilo kakvu promjenu njegove visine.
+
+*/
+
+
 .banner-section {
   width: 75%;
   margin: 3rem auto;

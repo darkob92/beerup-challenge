@@ -31,14 +31,14 @@ class Main extends Component {
             <div className="main-container__products">
                 {this.state.beers.map((beer, i) => {
                   return(
-                      <Product
-                        key={beer.id}
-                        name={beer.name}
-                        imgUrl={beer.image_url}
-                        ibu={beer.ibu}
-                        abv={beer.abv}
-                        description={beer.description}
-                      />
+                    <Product
+                      key={beer.id}
+                      name={beer.name}
+                      imgUrl={beer.image_url}
+                      ibu={beer.ibu}
+                      abv={beer.abv}
+                      description={beer.description}
+                    />
                   );
                 })}
             </div>

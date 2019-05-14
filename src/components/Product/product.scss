@@ -2,14 +2,13 @@
 
 .product {
   height: 28%;
-  width: 25%;
+  width: 23%;
   padding: 1rem;
   position: relative;
   display: flex;
   background: #fff;
   box-shadow: .2rem .2rem 3rem #ccc;
-  margin-top: 2rem;
-  margin-right: 2rem;
+  margin: 2rem;
   border-radius: 0.5rem;
 
    @media screen and (max-width: 1050px) {
@@ -31,7 +30,7 @@
   @media screen and (max-width: 600px) {
     margin-right: 4rem;
     height: 56%;
-    width: 30%;
+    width: 50%;
   }
 
   &__fav {
@@ -50,11 +49,13 @@
 
     h4 {
       font-size: 1.2rem;
-      width: 35%;
+      width: 100%;
       text-transform: uppercase;
+      height: 25%;
       overflow: hidden;
+      /* overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap;
+      white-space: nowrap; */
 
       @media screen and (max-width: 750px) {
         width: 50%;

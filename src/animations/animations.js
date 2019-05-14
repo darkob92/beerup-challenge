@@ -27,13 +27,13 @@ const NavAnimation = (props) => {
 }
 
 const ProductsAnimations = (props) => {
-  return(
+  return (
     <Tween
-      from={{opacity: 0, delay: 1, ease: Power2.easeOut}}
+      from={{ opacity: 0, delay: 1, ease: Power2.easeOut }}
     >
       {props.children}
     </Tween>
-  );
+  )
 }
 
 export {

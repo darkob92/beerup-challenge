@@ -25,7 +25,7 @@ class Product extends Component {
             <img alt="favorite" className="product__fav" src={HeartOutline} />
             <img alt="beer" className="product__beer" src={imgUrl} />
             <div className="product__description">
-              <h4>{name}</h4>
+              <h4>{name.length  < 20 ? `${name}` : `${name.substring(0, 20)}...`}</h4>
               <p>
                 <span>IBU</span>
                 <span>{ibu}</span>

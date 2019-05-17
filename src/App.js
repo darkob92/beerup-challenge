@@ -5,6 +5,7 @@ import Banner from './components/Banner/Banner';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
 import SignUp from './components/SignUp/SignUp';
+import Favorites from './components/Favorites/Favorites';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Banner />
         <Route exact path="/" component={Main} />
         <Route path="/signup" component={SignUp} />
+        <Favorites />
         <Footer />
       </div>
     </Router>

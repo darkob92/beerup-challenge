@@ -3,6 +3,7 @@ import '../../Sass/components.scss';
 import './main.scss';
 import Product from '../Product/Product';
 import Crate from '../../assets/crate.svg';
+import Favorites from '../Favorites/Favorites';
 
 class Main extends Component {
   state = {
@@ -15,10 +16,10 @@ class Main extends Component {
     const beers = await data.json();
 
     this.setState({
-      beers
+      beers: beers
     });
 
-    console.log(this.state.beers);
+    //console.log(this.state.beers);
   }
 
   render() {
